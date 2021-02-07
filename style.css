@@ -1,0 +1,86 @@
+:root {
+  font-size: 16px;
+  --text-primary: #ffffff;
+  --text-secondary: #000000;
+  --bg-primary: #1d2d50;
+  --bg-secondary: #1e5f74;
+  --transition-speed: 600ms;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+ul,
+li {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.bi-person-square {
+  font-size: 12rem;
+}
+
+.header-container {
+  display: flex;
+  height: 15rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.browser-window-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  min-height: 100vh;
+  border: 1px solid #000;
+}
+
+.browser-tab-container {
+  height: 5vh;
+  display: flex;
+  border: 1px solid #000;
+}
+
+.browser-tab-container .tab-item {
+  display: flex;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  align-items: center;
+  height: 100%;
+  padding: 0 0.8rem;
+  border-left: 1px solid white;
+  border-radius: 1rem 1rem 0 0;
+  background-color: var(--bg-primary);
+}
+
+.browser-tab-container .tab-item .bi-x {
+  margin-left: 1rem;
+  font-size: 1.2rem;
+}
+
+.browser-search-container {
+  height: 8vh;
+  border: 1px solid #000;
+}
+
+.browser-content-container {
+  height: 86vh;
+  border: 1px solid #000;
+}
