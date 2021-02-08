@@ -38,7 +38,7 @@ const changeActiveTab = (element) => {
 const options = {
   strings: [
     'a Freedom En',
-    'a Freelance English Teacher',
+    'an English Teacher',
     'an Fully ',
     'a Full Stack Web Developer',
   ],

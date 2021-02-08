@@ -1,6 +1,7 @@
 :root {
   font-size: 16px;
   font-family: 'Courier New', Courier, monospace;
+  line-height: 1.5;
   --text-primary: #ffffff;
   --text-primary-hover: #23907e;
 
@@ -58,14 +59,19 @@ h4 {
 .header-container {
   display: flex;
   height: 15rem;
-  justify-content: space-around;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
 
-.header-container .fas {
-  font-size: 12rem;
+.header-container h1 {
+  font-size: 3rem;
+}
+
+.header-container h2 {
+  font-size: 2rem;
 }
 
 /* Animation */
@@ -189,7 +195,8 @@ h4 {
 /* Browser content */
 
 .browser-content-container {
-  height: 84vh;
+  position: relative;
+  min-height: 84vh;
   overflow: hidden;
   padding: 1rem 3rem;
   margin-bottom: 1rem;
@@ -235,19 +242,39 @@ h4 {
   width: 100%;
   filter: grayscale(100%);
 }
+
 .card-item:hover .card-img {
   filter: grayscale(0);
 }
 
 .card-img img {
-  width: 100%;
+  max-width: 100%;
   border-radius: 1rem;
 }
 
 .card-text {
+  display: flex;
+  overflow-wrap: break-word;
+  align-items: center;
   margin-bottom: 1rem;
-  font-size: 2rem;
+  padding: 1rem;
+  font-size: 1rem;
   color: var(--text-primary);
+}
+
+/* About Me */
+
+.about-me-wrapper {
+  display: flex;
+}
+
+.about-me-text p:first-child {
+  margin: 0;
+}
+
+.about-me-text p {
+  font-size: 1.2rem;
+  padding-left: 1.5rem;
 }
 
 /* Line Wrap */
