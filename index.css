@@ -6,7 +6,7 @@
   --text-primary-hover: #23907e;
 
   --text-secondary: #1f1f1f;
-  --text-secondary-hover: #ffffff3a;
+  --text-secondary-hover: #8b8383;
 
   --bg-primary: #2c3e50;
   --bg-secondary: #7b8a8b;
@@ -79,9 +79,8 @@ h4 {
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;
-  animation-iteration-count: 1;
   animation-timing-function: ease-in;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 /* Browser */
@@ -197,8 +196,8 @@ h4 {
 .browser-content-container {
   position: relative;
   min-height: 84vh;
-  overflow: hidden;
-  padding: 1rem 3rem;
+  /* overflow: hidden; */
+  padding: 1rem 3rem 2.5rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--bg-primary);
   border-radius: 0 0 1rem 1rem;
@@ -226,11 +225,17 @@ h4 {
 }
 
 .card-item {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   border-radius: 1rem;
   background-color: var(--bg-primary);
   width: 33%;
   text-align: center;
+}
+
+.card-2-item {
+  width: 50% !important;
 }
 
 .card-item:hover {
@@ -239,8 +244,19 @@ h4 {
 }
 
 .card-img {
-  width: 100%;
+  height: 80%;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
   filter: grayscale(100%);
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+}
+
+.no-shadow {
+  box-shadow: none !important;
 }
 
 .card-item:hover .card-img {
@@ -254,12 +270,55 @@ h4 {
 
 .card-text {
   display: flex;
-  overflow-wrap: break-word;
   align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 1rem;
   color: var(--text-primary);
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Card */
+
+.project-card-item {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  -webkit-box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.45);
+  box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.45);
+}
+
+.project-card-img {
+  display: flex;
+  align-items: center;
+  filter: grayscale(100%);
+}
+
+.project-card-item:hover .project-card-img {
+  filter: grayscale(0);
+}
+
+.project-card-img img {
+  max-width: 100%;
+}
+
+.project-card-details {
+  background-color: var(--bg-light);
+  padding: 0.5rem 1rem;
+}
+
+.project-card-title {
+}
+
+.project-card-description {
+}
+
+.project-card-description a {
 }
 
 /* About Me */
