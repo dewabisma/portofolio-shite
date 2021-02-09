@@ -80,7 +80,7 @@ h4 {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-timing-function: ease-in;
-  animation-duration: 0.5s;
+  animation-duration: 1s;
 }
 
 /* Browser */
@@ -196,11 +196,11 @@ h4 {
 .browser-content-container {
   position: relative;
   min-height: 84vh;
-  /* overflow: hidden; */
   padding: 1rem 3rem 2.5rem;
   margin-bottom: 1rem;
   border-bottom: 2px solid var(--bg-primary);
   border-radius: 0 0 1rem 1rem;
+  transition: background-color 0.5s linear;
 }
 
 .browser-content-container h2 {
@@ -296,11 +296,11 @@ h4 {
 .project-card-img {
   display: flex;
   align-items: center;
-  filter: grayscale(100%);
+  filter: grayscale(100%) blur(1px);
 }
 
 .project-card-item:hover .project-card-img {
-  filter: grayscale(0);
+  filter: grayscale(0) blur(0);
 }
 
 .project-card-img img {
@@ -354,8 +354,12 @@ h4 {
   display: flex;
   color: var(--text-primary);
   background-color: var(--bg-primary);
-  justify-content: center;
+  justify-content: space-around;
   padding: 1rem 0;
+}
+
+.footer-container i {
+  margin-right: 0.4rem;
 }
 
 /* Keyframes */
