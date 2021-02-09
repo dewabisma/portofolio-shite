@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 :root {
   font-size: 16px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Itim', cursive;
   line-height: 1.5;
   --text-primary: #ffffff;
   --text-primary-hover: #23907e;
@@ -80,7 +82,7 @@ h4 {
   opacity: 1;
   animation-name: fadeInOpacity;
   animation-timing-function: ease-in;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 /* Browser */
@@ -288,9 +290,9 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 33%;
-  -webkit-box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.45);
-  -moz-box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.45);
-  box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.2);
+  box-shadow: -6px 5px 11px -3px rgba(0, 0, 0, 0.2);
 }
 
 .project-card-img {
@@ -346,6 +348,11 @@ h4 {
 .tiny-border {
   height: 1.5rem;
   border-right: 1px solid rgba(255, 255, 255, 0.356);
+}
+
+/* Form */
+
+.form {
 }
 
 /* Footer */
