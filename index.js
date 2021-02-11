@@ -14,7 +14,7 @@ const changeContent = (element, tabSelected) => {
     activeContent.classList.add('content-hidden');
 
     loader.classList.toggle('content-hidden');
-    contentContainer.style.backgroundColor = '#1d2d50';
+    contentContainer.style.backgroundColor = '#07689f';
 
     setTimeout(() => {
       loader.classList.toggle('content-hidden');
@@ -40,7 +40,7 @@ const options = {
     'a Freedom En',
     'an English Teacher',
     'an Fully ',
-    'a Full Stack Web Developer',
+    'a Self-Taught Web Developer',
   ],
   smartBackspace: false,
   fadeOutDelay: 1000,

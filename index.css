@@ -5,25 +5,31 @@
   font-family: 'Itim', cursive;
   line-height: 1.5;
   --text-primary: #ffffff;
-  --text-primary-hover: #23907e;
+  --text-primary-hover: #8f8f8f;
 
   --text-secondary: #1f1f1f;
   --text-secondary-hover: #8b8383;
 
-  --bg-primary: #2c3e50;
-  --bg-secondary: #7b8a8b;
-  --bg-light: #ecf0f1;
+  --bg-primary: #07689f;
+  --bg-secondary: #a2d5f2;
+  --bg-light: #fafafa;
+  --bg-orange: #ff7e67;
 
-  --button-primary: #2c3e50;
-  --button-primary-hover: #1a252f;
+  --button-primary: #07689f;
+  --button-primary-hover: #095480;
 
-  --button-secondary: #7b8a8b;
+  --button-secondary: #a2d5f2;
   --button-secondary-hover: #133f4e;
-  --transition-speed: 600ms;
 }
 
 html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 html,
@@ -56,6 +62,21 @@ h3,
 h4 {
   margin: 0;
   padding: 0;
+}
+
+.button {
+  border: 1px solid var(--bg-primary);
+  width: 5rem;
+  height: 2rem;
+  color: var(--text-primary);
+  border-radius: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background-color: var(--button-secondary);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--button-secondary-hover);
 }
 
 .header-container {
@@ -229,11 +250,13 @@ h4 {
 .card-item {
   display: flex;
   flex-direction: column;
+  filter: grayscale(100%);
   padding: 1rem;
   border-radius: 1rem;
   background-color: var(--bg-primary);
   width: 33%;
   text-align: center;
+  transition: filter 0.5s linear;
 }
 
 .card-2-item {
@@ -242,7 +265,7 @@ h4 {
 
 .card-item:hover {
   cursor: pointer;
-  background-color: var(--button-primary-hover);
+  filter: grayscale(0);
 }
 
 .card-img {
@@ -252,9 +275,9 @@ h4 {
   display: flex;
   align-items: center;
   filter: grayscale(100%);
-  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.3);
 }
 
 .no-shadow {
@@ -279,9 +302,9 @@ h4 {
   padding: 1rem 0;
   font-size: 1rem;
   color: var(--text-primary);
-  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 11px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Project Card */
@@ -314,13 +337,46 @@ h4 {
   padding: 0.5rem 1rem;
 }
 
-.project-card-title {
+/* Content Formatting */
+
+.content-body {
+  display: flex;
+  gap: 1rem;
 }
 
-.project-card-description {
+.content-wrapper h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.project-card-description a {
+.content-body img {
+  width: 250px;
+  margin: 1rem;
+}
+
+.content-photos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.content-photos-web {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.content-photo-wrap {
+  width: 100%;
+}
+
+.content-photo-wrap img {
+  width: 100% !important;
+}
+
+.content-photos img {
+  width: 45%;
 }
 
 /* About Me */
@@ -352,7 +408,63 @@ h4 {
 
 /* Form */
 
-.form {
+.form-wrapper {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.contact-details {
+  display: flex;
+  width: 43%;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-details img {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 50%;
+}
+
+.form-inputs {
+  width: 50%;
+}
+
+.fieldset {
+  padding: 1rem;
+  border: 1px solid var(--bg-primary);
+  border-radius: 0.25rem;
+  max-width: 100%;
+  margin: 0;
+  /* background-color: coral; */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form-input input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid var(--bg-primary);
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.form-input textarea {
+  resize: vertical;
 }
 
 /* Footer */
