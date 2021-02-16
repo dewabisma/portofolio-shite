@@ -13,7 +13,10 @@
   --bg-primary: #07689f;
   --bg-secondary: #a2d5f2;
   --bg-light: #fafafa;
+  --bg-transparent-light: #ffffff52;
   --bg-orange: #ff7e67;
+
+  --disabled: #838383;
 
   --button-primary: #07689f;
   --button-primary-hover: #095480;
@@ -140,7 +143,7 @@ h4 {
 }
 
 .browser-tab-container .tab-item:hover {
-  background-color: var(--button-secondary-hover);
+  background-color: var(--bg-transparent-light);
 }
 
 .browser-tab-container .tab-item.active {
@@ -173,6 +176,14 @@ h4 {
   color: var(--text-secondary);
 }
 
+.browser-search-container .navigation .fas.disabled {
+  color: var(--disabled);
+}
+
+.browser-search-container .navigation .fas.disabled a:hover {
+  color: var(--disabled);
+}
+
 .browser-search-container .navigation .fas {
   font-size: 1.5rem;
   padding: 0.3rem;
@@ -182,6 +193,11 @@ h4 {
   cursor: pointer;
   border-radius: 25rem;
   background-color: var(--text-secondary-hover);
+}
+
+.browser-search-container .navigation .fas.disabled:hover {
+  background: none;
+  cursor: default;
 }
 
 .browser-search-container .search-bar {
@@ -361,22 +377,12 @@ h4 {
   gap: 1.5rem;
 }
 
-.content-photos-web {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.content-photo-wrap {
-  width: 100%;
-}
-
-.content-photo-wrap img {
-  width: 100% !important;
+.content-photo {
+  width: 45%;
 }
 
 .content-photos img {
-  width: 45%;
+  width: 100%;
 }
 
 /* About Me */

@@ -60,9 +60,9 @@
 
           <div class="browser-search-container">
             <div class="navigation">
-              <i class="fas fa-arrow-left"></i>
+              <i id="previous-article" class="fas fa-arrow-left disabled"></i>
 
-              <i class="fas fa-arrow-right"></i>
+              <i id="next-article" class="fas fa-arrow-right disabled"></i>
 
               <a href="/">
                 <i class="fas fa-redo"></i>
@@ -99,7 +99,10 @@
                 <h2>What Do I Do?</h2>
 
                 <div class="card">
-                  <div class="card-item">
+                  <div
+                    class="card-item"
+                    onclick="changeArticle('main-content','teaching-activity')"
+                  >
                     <div class="card-text">
                       <h3>Teaching</h3>
                     </div>
@@ -112,7 +115,10 @@
                     </div>
                   </div>
 
-                  <div class="card-item">
+                  <div
+                    class="card-item"
+                    onclick="changeArticle('main-content','webdev-activity')"
+                  >
                     <div class="card-text">
                       <h3>Web Developing</h3>
                     </div>
@@ -125,7 +131,10 @@
                     </div>
                   </div>
 
-                  <div class="card-item">
+                  <div
+                    class="card-item"
+                    onclick="changeArticle('main-content','volunteering-activity')"
+                  >
                     <div class="card-text">
                       <h3>Volunteering</h3>
                     </div>
@@ -145,11 +154,6 @@
 
                 <div class="content-wrapper">
                   <div class="content-body">
-                    <img
-                      src="/resource/teaching/rotaract-3.jpg"
-                      alt="teaching"
-                    />
-
                     <div class="content-text">
                       <p>
                         I have been teaching for almost 2 years now. I have
@@ -180,22 +184,53 @@
                   <h3>Photos</h3>
 
                   <div class="content-photos">
-                    <img src="/resource/teaching/rotaract.jpg" alt="teaching" />
+                    <div class="content-photo">
+                      <img
+                        src="/resource/teaching/rotaract.png"
+                        alt="teaching"
+                      />
 
-                    <img
-                      src="/resource/teaching/rotaract-1.jpg"
-                      alt="teaching"
-                    />
+                      <h4>
+                        Celebrating Indonesia's Independence Day by volunteering
+                        to teach children in Singaraja
+                      </h4>
+                    </div>
 
-                    <img
-                      src="/resource/teaching/rotaract-4.jpg"
-                      alt="teaching"
-                    />
+                    <div class="content-photo">
+                      <img
+                        src="/resource/teaching/rotaract-1.png"
+                        alt="teaching"
+                      />
 
-                    <img
-                      src="/resource/teaching/rotaract-2.jpg"
-                      alt="teaching"
-                    />
+                      <h4>
+                        Celebrating Indonesia's Independence Day by volunteered
+                        to teach children in Singaraja
+                      </h4>
+                    </div>
+
+                    <div class="content-photo">
+                      <img
+                        src="/resource/teaching/rotaract-4.png"
+                        alt="teaching"
+                      />
+
+                      <h4>
+                        My friends and I when we volunteered at an elementary
+                        school as an <em>English Teacher</em>
+                      </h4>
+                    </div>
+
+                    <div class="content-photo">
+                      <img
+                        src="/resource/teaching/rotaract-2.png"
+                        alt="teaching"
+                      />
+
+                      <h4>
+                        My friends and I when we volunteered at an elementary
+                        school as an <em>English Teacher</em>
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -205,11 +240,6 @@
 
                 <div class="content-wrapper">
                   <div class="content-body">
-                    <img
-                      src="/resource/web-developing/coding.png"
-                      alt="coding"
-                    />
-
                     <div class="content-text">
                       <p>
                         The first time I get to taste programming was when I was
@@ -249,8 +279,8 @@
 
                   <h3>Photos</h3>
 
-                  <div class="content-photos-web">
-                    <div class="content-photo-wrap">
+                  <div class="content-photos">
+                    <div class="content-photo">
                       <img
                         src="/resource/web-developing/udemy.png"
                         alt="udemy"
@@ -258,7 +288,7 @@
                       <h4>Udemy Courses</h4>
                     </div>
 
-                    <div class="content-photo-wrap">
+                    <div class="content-photo">
                       <img
                         src="/resource/web-developing/youtube.png"
                         alt="youtube"
@@ -266,7 +296,7 @@
                       <h4>Traversy Media Youtube Channel</h4>
                     </div>
 
-                    <div class="content-photo-wrap">
+                    <div class="content-photo">
                       <img
                         src="/resource/web-developing/diklat.jpg"
                         alt="diklat"
@@ -274,7 +304,7 @@
                       <h4>Bootcamp in BDI</h4>
                     </div>
 
-                    <div class="content-photo-wrap">
+                    <div class="content-photo">
                       <img
                         src="/resource/web-developing/dilkat1.jpg"
                         alt="diklat"
@@ -290,11 +320,6 @@
 
                 <div class="content-wrapper">
                   <div class="content-body">
-                    <img
-                      src="/resource/volunteering/volunteering.png"
-                      alt="volunteering"
-                    />
-
                     <div class="content-text">
                       <p>
                         Being a volunteer is one of the best decision I have
@@ -323,20 +348,50 @@
                   <h3>Photos</h3>
 
                   <div class="content-photos">
-                    <img
-                      src="/resource/volunteering/griya-luhu2.jpg"
-                      alt="volunteering"
-                    />
+                    <div class="content-photo">
+                      <img
+                        src="/resource/volunteering/griya-luhu.jpg"
+                        alt="volunteering"
+                      />
 
-                    <img
-                      src="/resource/volunteering/griya-luhu4.jpg"
-                      alt="volunteering"
-                    />
+                      <h4>Donating food to a foundation in Pandemic Day</h4>
+                    </div>
 
-                    <img
-                      src="/resource/volunteering/griya-luhu6.jpg"
-                      alt="volunteering"
-                    />
+                    <div class="content-photo">
+                      <img
+                        src="/resource/volunteering/griya-luhu2.jpg"
+                        alt="volunteering"
+                      />
+
+                      <h4>
+                        Donating drinking bottle and creating water refill point
+                        at an elementary school in Karangasem
+                      </h4>
+                    </div>
+
+                    <div class="content-photo">
+                      <img
+                        src="/resource/volunteering/griya-luhu4.jpg"
+                        alt="volunteering"
+                      />
+
+                      <h4>
+                        Doing socialization about waste management and waste
+                        bank at SD Negeri 1 Pejeng
+                      </h4>
+                    </div>
+
+                    <div class="content-photo">
+                      <img
+                        src="/resource/volunteering/griya-luhu6.jpg"
+                        alt="volunteering"
+                      />
+
+                      <h4>
+                        Discussion with several schools representative about
+                        school waste management
+                      </h4>
+                    </div>
                   </div>
                 </div>
               </div>
